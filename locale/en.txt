@@ -1,0 +1,26 @@
+#: locale=en
+
+## Media
+
+### Title
+panorama_FA30E581_F4C0_F6A4_41D3_2F1CFB8E024E.label = Chemistry Lab
+panorama_FA308BD5_F4C0_D2AF_41E3_35F5AE489928.label = Computer Lab
+panorama_FA308D13_F4C0_57AB_41BB_86C8A69B57FC.label = Football Ground
+panorama_FA30473A_F4C0_B3E5_41DC_AA334AAFA8C3.label = Front Entrance
+panorama_FA309F13_F4C0_F3A4_41DF_94ADBEE9002A.label = Library
+panorama_FA3168D7_F4C0_DEAB_41E2_92ACDE874576.label = Pre-KG Classroom
+panorama_FA308117_F4C0_CFAC_41DF_538296D65583.label = School Courtyard
+panorama_E496A933_F4C0_7FE4_41E9_5CD3234104C6.label = School Entrance
+panorama_FA32B335_F4C0_53EC_41EE_2FD2642D17CD.label = School Entrance
+
+## Skin
+
+### Multiline Text
+HTMLText_E481D46B_EA89_F1EB_41E4_49140064DBD5.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-shadow:0px 0px 5px rgba(0,0,0,0.5);line-height:130%;text-align:center;font-size:25px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:25px;font-family:'Satoshi Medium';">MOUNT ZION INTERNATIONAL SCHOOL - CBSC</SPAN></SPAN></DIV><p STYLE="margin:0; line-height:6px;"><BR STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-size:12px;font-family:Arial, Helvetica, sans-serif;"/></p><DIV STYLE="text-shadow:0px 0px 5px rgba(0,0,0,0.5);line-height:130%;text-align:center;font-size:21px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:21px;font-family:'Satoshi';">{{title}}</SPAN></SPAN></DIV></div>
+
+## Tour
+
+### Description
+
+### Title
+tour.name = Mount Zion International School - CBSC
