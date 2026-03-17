@@ -3,15 +3,14 @@
 ## Media
 
 ### Title
-panorama_FA30E581_F4C0_F6A4_41D3_2F1CFB8E024E.label = Chemistry Lab
-panorama_FA308BD5_F4C0_D2AF_41E3_35F5AE489928.label = Computer Lab
-panorama_FA308D13_F4C0_57AB_41BB_86C8A69B57FC.label = Football Ground
-panorama_FA30473A_F4C0_B3E5_41DC_AA334AAFA8C3.label = Front Entrance
-panorama_FA309F13_F4C0_F3A4_41DF_94ADBEE9002A.label = Library
-panorama_FA3168D7_F4C0_DEAB_41E2_92ACDE874576.label = Pre-KG Classroom
-panorama_FA308117_F4C0_CFAC_41DF_538296D65583.label = School Courtyard
-panorama_E496A933_F4C0_7FE4_41E9_5CD3234104C6.label = School Entrance
-panorama_FA32B335_F4C0_53EC_41EE_2FD2642D17CD.label = School Entrance
+panorama_EA65FD5F_FA3A_6CCE_41BB_D5F6990331A3.label = Chemistry Lab
+panorama_EA78059D_FA09_BC50_41EB_C809336336E4.label = Computer Lab
+panorama_EAEFD2E5_FA3B_95F0_41DC_852D6E2D0E54.label = Entrance
+panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E.label = Football Ground
+panorama_EAD83496_FA36_9C50_41E0_9B38F5EBBEF2.label = Front Entrance
+panorama_EA4AADCF_FA0A_AC30_41E5_FBD574E96707.label = KG Classroom
+panorama_EA4A7813_FA09_9450_41E5_744BD174BF63.label = Library
+panorama_EA417904_FA36_9430_41D7_A56106D08C5A.label = School Courtyard
 
 ## Skin
 
