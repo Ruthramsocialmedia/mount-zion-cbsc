@@ -7,7 +7,7 @@
                 { icon: "fa-house", label: "Home", id: "menu-home", url: "https://mount-zion-schools.netlify.app/" },
                 { icon: "fa-magnifying-glass", label: "Search", id: "menu-search" },
                 { icon: "fa-panorama", label: "Panorama", id: "menu-panorama" },
-                { icon: "fa-street-view", label: "Google Street View", id: "menu-street-view" }
+                { icon: "fa-street-view", label: "Google Street View", id: "menu-street-view", url: "https://maps.app.goo.gl/K7Xf9gECwTTRWzCw9" }
             ]
         },
         {
