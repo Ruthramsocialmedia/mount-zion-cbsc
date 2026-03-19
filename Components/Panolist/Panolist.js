@@ -537,6 +537,20 @@
   let allPanoramas = [];
   let selectedIndex = -1;
 
+  // ── Hardcoded mainPlayList order from 3DVista export ──
+  // This MUST match the "items" array in mainPlayList inside script_general.js.
+  // Index = playlist position used by tour.setMainMediaByIndex().
+  const PLAYLIST_ORDER = [
+    { id: "F17EF106_FF61_B012_41CC_A24A1654DEAE",  label: "Entrance" },
+    { id: "EA2AD225_FA39_B470_41E6_1FBAE0575A7E",  label: "Football Ground" },
+    { id: "EAD83496_FA36_9C50_41E0_9B38F5EBBEF2",  label: "Front Entrance" },
+    { id: "EA417904_FA36_9430_41D7_A56106D08C5A",  label: "School Courtyard" },
+    { id: "EA78059D_FA09_BC50_41EB_C809336336E4",  label: "Computer Lab" },
+    { id: "EA65FD5F_FA3A_6CCE_41BB_D5F6990331A3",  label: "Chemistry Lab" },
+    { id: "EA4A7813_FA09_9450_41E5_744BD174BF63",  label: "Library" },
+    { id: "EA4AADCF_FA0A_AC30_41E5_FBD574E96707",  label: "KG Classroom" }
+  ];
+
   function renderList(items, query = "") {
     contentArea.innerHTML = '';
     if (!items || items.length === 0) {
@@ -592,94 +606,38 @@
     renderList(filtered, q);
   });
 
-  // --- Async Data Fetching ---
-  async function loadData() {
+  // --- Build panorama list from hardcoded order + local thumbnails ---
+  function loadData() {
     try {
-      const endpoint = "https://pano-fetcher.onrender.com";
-
-      // 1. Get script & labels
-      const [scriptCode, enTxt] = await Promise.all([
-        fetch("./script_general.js").then(r => r.text()).catch(() => null),
-        fetch("./locale/en.txt").then(r => r.text()).catch(() => null)
-      ]);
-
-      if (!enTxt) throw new Error("Locale missing");
-
-      // 2. Parse Labels
-      const labelMap = {};
-      const fallbackOrder = [];
-      enTxt.split("\n").forEach(line => {
-        const m = line.match(/panorama_([A-Z0-9_]+)\.label\s*=\s*(.+)/);
-        if (m) {
-          const id = m[1].trim();
-          labelMap[id] = m[2].trim().replace(/^"|"$/g, "");
-          fallbackOrder.push(id);
-        }
-      });
-
-      // Determine exact order from script_general.js mainPlayList
-      let orderedIds = [];
-      try {
-        // Find the mainPlayList block robustly. It ends with "class":"PlayList"
-        const match = scriptCode.match(/"id":"mainPlayList","items":\[(.*?)\](?:,"[^"]+":[^,]+)*,"class":"PlayList"/);
-        if (match) {
-          const itemsStr = match[1];
-          const tokens = itemsStr.match(/this\.PanoramaPlayListItem_[A-Za-z0-9_]+|"media":"this\.panorama_([A-Z0-9_]+)"/g) || [];
-
-          const refMap = {};
-          const playListItems = scriptCode.split('"class":"PanoramaPlayListItem"');
-          for (const block of playListItems) {
-            const idMatch = block.match(/"id":"(PanoramaPlayListItem_[A-Z0-9_]+)"/);
-            const mediaMatch = block.match(/"media":"this\.panorama_([A-Z0-9_]+)"/);
-            if (idMatch && mediaMatch) {
-              refMap["this." + idMatch[1]] = mediaMatch[1];
-            }
+      // Use en.txt labels if available (for locale support), otherwise use hardcoded labels
+      fetch("./locale/en.txt").then(r => r.text()).then(enTxt => {
+        const labelMap = {};
+        enTxt.split("\n").forEach(line => {
+          const m = line.match(/panorama_([A-Z0-9_]+)\.label\s*=\s*(.+)/);
+          if (m) {
+            labelMap[m[1].trim()] = m[2].trim().replace(/^"|"$/g, "");
           }
+        });
 
-          for (const token of tokens) {
-            if (token.startsWith('"media"')) {
-              const mId = token.match(/"media":"this\.panorama_([A-Z0-9_]+)"/);
-              if (mId) orderedIds.push(mId[1]);
-            } else {
-              if (refMap[token]) orderedIds.push(refMap[token]);
-            }
-          }
-        }
-      } catch (e) { console.warn("Could not parse order", e); }
+        // Build panorama list in mainPlayList order
+        allPanoramas = PLAYLIST_ORDER.map((entry, idx) => ({
+          id: entry.id,
+          label: labelMap[entry.id] || entry.label,
+          playlistIndex: idx,
+          thumb: "media/panorama_" + entry.id + "_t.webp"
+        }));
 
-      // Filter out any invalid items
-      orderedIds = orderedIds.filter(id => labelMap[id]);
-
-      // Append any remaining missing items from the fallback order
-      fallbackOrder.forEach(id => {
-        if (!orderedIds.includes(id)) orderedIds.push(id);
+        renderList(allPanoramas);
+      }).catch(function () {
+        // Fallback: use hardcoded labels + local thumbnails
+        allPanoramas = PLAYLIST_ORDER.map((entry, idx) => ({
+          id: entry.id,
+          label: entry.label,
+          playlistIndex: idx,
+          thumb: "media/panorama_" + entry.id + "_t.webp"
+        }));
+        renderList(allPanoramas);
       });
-
-      const labelOrder = orderedIds.map((id, idx) => ({ id, label: labelMap[id], playlistIndex: idx }));
-
-      // 3. Get Thumbnails
-      let thumbnails = [];
-      if (scriptCode) {
-        try {
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: { "Content-Type": "text/plain" },
-            body: scriptCode,
-          });
-          if (res.ok) {
-            const json = await res.json();
-            thumbnails = json.thumbnails || [];
-          }
-        } catch (e) { }
-      }
-
-      // 4. Merge
-      allPanoramas = labelOrder.map(item => {
-        const t = thumbnails.find(x => x && x.id && x.id.includes(item.id));
-        return t ? { ...item, thumb: t.thumb } : item;
-      });
-
-      renderList(allPanoramas);
 
     } catch (err) {
       console.error(err);
