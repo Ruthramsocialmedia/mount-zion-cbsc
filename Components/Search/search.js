@@ -566,7 +566,7 @@
       });
 
       newDirBtn.addEventListener('click', function () {
-        var dest = encodeURIComponent(item.title + ', Mount Zion International School - CBSC');
+        var dest = encodeURIComponent(item.title + ', Mount Zion International School - CBSE');
         var url = 'https://www.google.com/maps/dir/?api=1&destination=' + dest;
         if (window.userLocation) {
           url += '&origin=' + window.userLocation.lat + ',' + window.userLocation.lng;

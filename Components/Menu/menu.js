@@ -502,7 +502,7 @@
 
     panel.innerHTML = `
         <div class="menu-head">
-            <div class="menu-head-title">Mount Zion School - CBSC</div>
+            <div class="menu-head-title">Mount Zion School - CBSE</div>
             <div class="menu-head-sub">Explore the virtual tour</div>
             <button class="menu-close-btn" id="menu_close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
         </div>

@@ -1,8 +1,8 @@
 (function () {
-    // Mount Zion School - CBSC Coordinates
+    // Mount Zion School - CBSE Coordinates
     const SCHOOL_LAT = 10.2944880829204;
     const SCHOOL_LNG = 78.7644392580259;
-    const SCHOOL_NAME = "Mount Zion International School - CBSC";
+    const SCHOOL_NAME = "Mount Zion International School - CBSE";
     const SCHOOL_ADDRESS = "Lena Villaku, Pillivalam Post, Pudukkottai";
 
     const style = document.createElement('style');

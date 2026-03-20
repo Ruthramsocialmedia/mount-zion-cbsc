@@ -1,4 +1,4 @@
-# Mount Zion International School - CBSC
+# Mount Zion International School - CBSE
 
 Professional Corporate Web Color System
 

@@ -436,7 +436,7 @@ const montfortLogo = (function () {
     const logoCard = document.createElement("div");
     logoCard.className = "logo-card";
     logoCard.setAttribute("role", "img");
-    logoCard.setAttribute("aria-label", "Mount Zion International School - CBSC Logo");
+    logoCard.setAttribute("aria-label", "Mount Zion International School - CBSE Logo");
     logoCard.tabIndex = 0; // Make it focusable for accessibility
 
     // Create overlay div
@@ -447,7 +447,7 @@ const montfortLogo = (function () {
     const img = document.createElement("img");
     img.className = "logo-image";
     img.src = "Components/Logo/Assets/Logo.png";
-    img.alt = "Mount Zion International School - CBSC Logo";
+    img.alt = "Mount Zion International School - CBSE Logo";
     img.loading = "eager";
 
     // Create school name element
@@ -460,7 +460,7 @@ const montfortLogo = (function () {
 
     const schoolNameSub = document.createElement("span");
     schoolNameSub.className = "school-name-sub";
-    schoolNameSub.textContent = "INTERNATIONAL SCHOOL - CBSC";
+    schoolNameSub.textContent = "INTERNATIONAL SCHOOL - CBSE";
 
     const schoolNameLocation = document.createElement("span");
     schoolNameLocation.className = "school-name-location";
@@ -484,7 +484,7 @@ const montfortLogo = (function () {
 
     // Add error handling for image
     img.onerror = function () {
-        console.warn("Mount Zion International School - CBSC logo image failed to load");
+        console.warn("Mount Zion International School - CBSE logo image failed to load");
         const fallbackText = document.createElement("div");
         fallbackText.style.cssText = `
             position: relative;
