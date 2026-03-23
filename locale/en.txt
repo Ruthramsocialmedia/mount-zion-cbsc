@@ -24,11 +24,11 @@ imlevel_0C064D8F_1AFB_F08B_41B9_8A37175390CD.url = media/panorama_EAD83496_FA36_
 panorama_EA65FD5F_FA3A_6CCE_41BB_D5F6990331A3.label = Chemistry Lab
 panorama_EA78059D_FA09_BC50_41EB_C809336336E4.label = Computer Lab
 panorama_0C585E5A_1B59_1395_41A1_BA8AB7BA3D1A.label = Entrance
-panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E.label = Football Ground
 panorama_EAD83496_FA36_9C50_41E0_9B38F5EBBEF2.label = Front Entrance
 panorama_EA4AADCF_FA0A_AC30_41E5_FBD574E96707.label = KG Classroom
 panorama_EA4A7813_FA09_9450_41E5_744BD174BF63.label = Library
 panorama_EA417904_FA36_9430_41D7_A56106D08C5A.label = School Courtyard
+panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E.label = Sports Facility
 
 ## Skin
 
