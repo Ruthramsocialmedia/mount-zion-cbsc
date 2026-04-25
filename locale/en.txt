@@ -1,34 +1,18 @@
 #: locale=en
 
-## Hotspot
-
-### Text
-HotspotPanoramaOverlayTextImage_0CD78B65_1927_11BF_41B4_15A7F492AB5A.text = Entrance
-HotspotPanoramaOverlayTextImage_0FA5D60E_193B_138D_41B7_3D90E8F63209.text = Football Ground
-HotspotPanoramaOverlayTextImage_0F26118E_192B_708D_4195_742371376318.text = Football Ground
-HotspotPanoramaOverlayTextImage_0C3B4440_1939_17F5_418A_79AC26E6B2F0.text = Front Entrance
-HotspotPanoramaOverlayTextImage_0C399080_1929_6F75_41A2_F3A8ADE9BB82.text = Front Entrance
-HotspotPanoramaOverlayTextImage_0C7C2C7E_193B_178D_41B1_5E4D9C95B43A.text = School Courtyard
-
 ## Media
 
-### Image
-imlevel_0FC0D91B_1B59_7194_4165_9F022781EBEE.url = media/panorama_0C585E5A_1B59_1395_41A1_BA8AB7BA3D1A_HS_ags2j4yi_en.webp
-imlevel_0C1A1CBF_1AFB_F08C_41B9_C8EC08407072.url = media/panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E_HS_cf6yabqf_en.webp
-imlevel_0C182C4A_1AFB_F7F4_41AD_E24F74B1564A.url = media/panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E_HS_zadi0qlu_en.webp
-imlevel_0C034E44_1AFB_F3FC_419E_C805807BE398.url = media/panorama_EA417904_FA36_9430_41D7_A56106D08C5A_HS_e4rorc8s_en.webp
-imlevel_0C04CD0F_1AFB_F18B_4195_FB73E7B0CE73.url = media/panorama_EAD83496_FA36_9C50_41E0_9B38F5EBBEF2_HS_bm5pv0fx_en.webp
-imlevel_0C064D8F_1AFB_F08B_41B9_8A37175390CD.url = media/panorama_EAD83496_FA36_9C50_41E0_9B38F5EBBEF2_HS_womkrrqh_en.webp
-
 ### Title
+panorama_D4CDBC5D_C475_A7A3_417B_3833F66E116D.label = Biology Lab
 panorama_EA65FD5F_FA3A_6CCE_41BB_D5F6990331A3.label = Chemistry Lab
 panorama_EA78059D_FA09_BC50_41EB_C809336336E4.label = Computer Lab
-panorama_0C585E5A_1B59_1395_41A1_BA8AB7BA3D1A.label = Entrance
-panorama_EAD83496_FA36_9C50_41E0_9B38F5EBBEF2.label = Front Entrance
+panorama_D63C35C9_C47D_60A3_41E6_DF350FC68EDC.label = Entrance
+panorama_D6436545_C475_E1A0_41DF_46C5B56B3E75.label = Front Entrance
 panorama_EA4AADCF_FA0A_AC30_41E5_FBD574E96707.label = KG Classroom
 panorama_EA4A7813_FA09_9450_41E5_744BD174BF63.label = Library
-panorama_EA417904_FA36_9430_41D7_A56106D08C5A.label = School Courtyard
-panorama_EA2AD225_FA39_B470_41E6_1FBAE0575A7E.label = Sports Facility
+panorama_D493880D_C475_AFA3_41AA_082F98B4EFB0.label = Physics Lab
+panorama_D49D1BBA_C474_A0E1_41E0_0A1271A55D6A.label = School Courtyard
+panorama_D577D6BC_C47B_60E2_41D5_FFDC3A291640.label = Sports Facility
 
 ## Skin
 
@@ -40,4 +24,4 @@ HTMLText_E481D46B_EA89_F1EB_41E4_49140064DBD5.html = <div style="text-align:left
 ### Description
 
 ### Title
-tour.name = Mount Zion International School - CBSE
+tour.name = MOUNT ZION International School - CBSE
