@@ -35,7 +35,7 @@
                 { icon: "fa-person-swimming", label: "Swimming Pool", id: "menu-gsv-swimming" },
                 { icon: "fa-person-running", label: "Running Track", id: "menu-gsv-running" },
                 { icon: "fa-futbol", label: "Football Ground", id: "menu-gsv-football" },
-                { icon: "fa-baseball-bat-ball", label: "Cricket Ground", id: "menu-gsv-cricket" },
+                { icon: "fa-baseball-bat-ball", label: "Cricket Net Practice Area", id: "menu-gsv-cricket" },
             ],
         },
         {

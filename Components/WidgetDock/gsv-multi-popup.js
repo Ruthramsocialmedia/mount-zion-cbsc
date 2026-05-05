@@ -58,7 +58,7 @@
             url: "https://www.google.com/maps/embed?pb=!4v1777895279052!6m8!1m7!1sCAoSHENJQUJJaEFwazhCUmoxSDQ1YUNtWi1yaTVxUEo.!2m2!1d10.29331093732107!2d78.76160778476212!3f268.48028284503766!4f-10.00818542014673!5f0.7820865974627469"
         },
         "menu-gsv-cricket": {
-            label: "Cricket Ground",
+            label: "Cricket Net Practice Area",
             url: "https://www.google.com/maps/embed?pb=!4v1777967520110!6m8!1m7!1sCAoSHENJQUJJaENXTXNZRE5uRzN3NHhMMWhpNmdtZGo.!2m2!1d10.29351978718858!2d78.76170376855326!3f192.36326804611366!4f-5.9878901322478555!5f0.7820865974627469"
         }
     };
