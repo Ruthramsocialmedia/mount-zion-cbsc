@@ -24,6 +24,20 @@
             ],
         },
         {
+            label: "GSV — Sports Facility",
+            items: [
+                { icon: "fa-table-tennis-paddle-ball", label: "Tennis Court", id: "menu-gsv-tennis" },
+                { icon: "fa-futbol", label: "Football Court", id: "menu-gsv-football1" },
+                { icon: "fa-circle-dot", label: "Volleyball Court I", id: "menu-gsv-volleyball1" },
+                { icon: "fa-circle-dot", label: "Volleyball Court II", id: "menu-gsv-volleyball2" },
+                { icon: "fa-basketball", label: "Basketball Court I", id: "menu-gsv-basketball2" },
+                { icon: "fa-basketball", label: "Basketball Court II", id: "menu-gsv-basketball3" },
+                { icon: "fa-person-swimming", label: "Swimming Pool", id: "menu-gsv-swimming" },
+                { icon: "fa-person-running", label: "Running Track", id: "menu-gsv-running" },
+                { icon: "fa-futbol", label: "Football Ground", id: "menu-gsv-football" },
+            ],
+        },
+        {
             label: "Services",
             items: [
                 {
@@ -104,6 +118,7 @@
                 },
             ],
         },
+
         {
             label: "Connect",
             items: [
@@ -641,13 +656,15 @@
             // Check if it's a Link or Action vs Component
             const isLink = !!item.dataset.url;
             const isAction = item.id === "menu-fullscreen" || item.id === "menu-home";
-            // Treat actions like links for highlight purposes (Flash only)
-            const shouldFlash = isLink || isAction;
+            // GSV sport items open popups — flash only (popup has its own close, no deactivate event)
+            const isGsvSport = item.id.startsWith("menu-gsv-") && item.id !== "menu-street-view";
+            // Treat actions/links/gsv-sports like links for highlight purposes (Flash only)
+            const shouldFlash = isLink || isAction || isGsvSport;
 
             if (shouldFlash) {
                 // Flash highlight (Toggle visual only)
                 item.classList.add("active");
-                setTimeout(() => item.classList.remove("active"), 300);
+                setTimeout(() => item.classList.remove("active"), 400);
             } else {
                 // Components (Explore, Contact, etc.) -> Persistent Active State
                 items.forEach((i) => i.classList.remove("active"));
@@ -689,11 +706,12 @@
                 }
             }
 
-            // Auto-close menu on mobile, but NOT for search or GSV (overlays)
+            // Auto-close menu on mobile, but NOT for search, GSV explore, or GSV sport overlays
             if (
                 window.innerWidth <= 480 &&
                 item.id !== "menu-search" &&
-                item.id !== "menu-street-view"
+                item.id !== "menu-street-view" &&
+                !item.id.startsWith("menu-gsv-")
             ) {
                 isOpen = false;
                 toggleBtn.classList.remove("open");
