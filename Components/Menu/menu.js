@@ -27,7 +27,7 @@
             label: "GSV — Sports Facility",
             items: [
                 { icon: "fa-table-tennis-paddle-ball", label: "Tennis Court", id: "menu-gsv-tennis" },
-                { icon: "fa-futbol", label: "Football Court", id: "menu-gsv-football1" },
+                { icon: "fa-hockey-puck", label: "Hockey Ground", id: "menu-gsv-football1" },
                 { icon: "fa-circle-dot", label: "Volleyball Court I", id: "menu-gsv-volleyball1" },
                 { icon: "fa-circle-dot", label: "Volleyball Court II", id: "menu-gsv-volleyball2" },
                 { icon: "fa-basketball", label: "Basketball Court I", id: "menu-gsv-basketball2" },
@@ -35,6 +35,7 @@
                 { icon: "fa-person-swimming", label: "Swimming Pool", id: "menu-gsv-swimming" },
                 { icon: "fa-person-running", label: "Running Track", id: "menu-gsv-running" },
                 { icon: "fa-futbol", label: "Football Ground", id: "menu-gsv-football" },
+                { icon: "fa-baseball-bat-ball", label: "Cricket Ground", id: "menu-gsv-cricket" },
             ],
         },
         {
